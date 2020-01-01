@@ -1,0 +1,3 @@
+[submodule "hardware-video-encoder"]
+	path = hardware-video-encoder
+	url = https://github.com/bmegli/hardware-video-encoder.git
