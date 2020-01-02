@@ -42,7 +42,7 @@ Tested with D435 camera. There is possibility that it will also work with AMD ha
 - cleanup
 
 Realsense and VAAPI devices are configured to work together (no software depth processing on the host)
-- VAAPI is configured for HEVC 10 bit per channel P010LE pixel format
+- VAAPI is configured for HEVC 10 bit per channel [P010LE](https://github.com/bmegli/hardware-video-encoder/issues/18#issuecomment-569501602) pixel format
 - Realsense is configured to ouput P016LE (Y plane) compatible depth data
 - P016LE data is binary compatible with P010LE data
 - the data output by Realsense is directly fed to VAAPI hardware encoder
