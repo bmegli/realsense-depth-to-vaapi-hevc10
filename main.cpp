@@ -103,11 +103,11 @@ bool main_loop(const input_args& input, rs2::pipeline& realsense, hve *he, ofstr
 	for(f = 0; f < frames; ++f)
 	{
 		rs2::frameset frameset = realsense.wait_for_frames();
-		rs2::frame depth = frameset.get_depth_frame();
+		rs2::depth_frame depth = frameset.get_depth_frame();
 
-		const int w = depth.as<rs2::video_frame>().get_width();
-		const int h = depth.as<rs2::video_frame>().get_height();
-		const int stride=depth.as<rs2::video_frame>().get_stride_in_bytes();
+		const int w = depth.get_width();
+		const int h = depth.get_height();
+		const int stride=depth.get_stride_in_bytes();
 
 		if(!color_data)
 		{  //prepare dummy color plane for P010LE format, half the size of Y
