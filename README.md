@@ -13,16 +13,16 @@ See [hardware-video-streaming](https://github.com/bmegli/hardware-video-streamin
 
 Tested with 848x480, 30 fps.
 
-- CPU usage reported by `htop` (percentage used, 100% would mean single core fully utilzed).
-- GPU usage reported by `intel_gpu_top` (render busy percentage)
+- CPU usage reported by `htop` (core %)
+- GPU usage reported by `intel_gpu_top`(render busy)
 
 | Platform               | CPU       | GPU          |  CPU usage    | GPU usage  |
 |------------------------|-----------|--------------|---------------|------------|
 | Latte Panda Alpha      | M3-7Y30   |Intel HD 615  |   to be done  | to be done |
 | High end laptop (2017) | i7-7820HK |Intel HD 630  |    10%        |   14%      |
 
-From the digits above we see that mixed HEVC implementation was used (FF hardware + shader).\
-On other architectures it may be possible to use hardware/low power HEVC encoding.
+Here (Kaby Lake) we see that GPU took part in encoding.
+On some architectures it is possible to use hardware/low power HEVC encoding (no GPU usage).
 
 ## Platforms 
 
