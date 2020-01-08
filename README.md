@@ -9,7 +9,7 @@ This program is example how to use:
  
 See [benchmarks](https://github.com/bmegli/realsense-depth-to-vaapi-hevc10/wiki/Benchmarks) on wiki for CPU/GPU usage.
 
-See [how it works](https://github.com/bmegli/realsense-depth-to-vaapi-hevc10/wiki/How-it-works) on wiki to understand the code
+See [how it works](https://github.com/bmegli/realsense-depth-to-vaapi-hevc10/wiki/How-it-works) on wiki to understand the code.
 
 See [hardware-video-streaming](https://github.com/bmegli/hardware-video-streaming) for other related projects.
 
@@ -17,7 +17,9 @@ See [hardware-video-streaming](https://github.com/bmegli/hardware-video-streamin
 
 This program uses video codec for depth map encoding. It will not work perfectly.
 
-If you are not concerned with CPU usage and realtime requirements consider using [HEVC 3D extension](https://hevc.hhi.fraunhofer.de/3dhevc) reference software encoder.
+Consider [HEVC 3D extension](https://hevc.hhi.fraunhofer.de/3dhevc) software encoder if you are not concerned with:
+- CPU usage
+- realtime requirements
 
 ## Platforms 
 
