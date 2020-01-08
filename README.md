@@ -9,7 +9,7 @@ This program is example how to use:
  
 See [hardware-video-streaming](https://github.com/bmegli/hardware-video-streaming) for other related projects.
 
-## CPU usage
+## CPU/GPU usage
 
 Tested with 848x480, 30 fps.
 
