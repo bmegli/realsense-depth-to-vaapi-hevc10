@@ -7,17 +7,17 @@ This program is example how to use:
  - with 10 bit depth encoding
  - stored to disk as example
  
-See [hardware-video-streaming](https://github.com/bmegli/hardware-video-streaming) for other related projects.
-
 See [benchmarks](https://github.com/bmegli/realsense-depth-to-vaapi-hevc10/wiki/Benchmarks) on wiki for CPU/GPU usage.
 
 See [how it works](https://github.com/bmegli/realsense-depth-to-vaapi-hevc10/wiki/How-it-works) on wiki to understand the code
+
+See [hardware-video-streaming](https://github.com/bmegli/hardware-video-streaming) for other related projects.
 
 ## Warning
 
 This program uses video codec for depth map encoding. It will not work perfectly.
 
-If you are not concerned with CPU usage and realtime requirements consider using [HEVC 3D extension](https://hevc.hhi.fraunhofer.de/3dhevc) reference software encoder instead.
+If you are not concerned with CPU usage and realtime requirements consider using [HEVC 3D extension](https://hevc.hhi.fraunhofer.de/3dhevc) reference software encoder.
 
 ## Platforms 
 
