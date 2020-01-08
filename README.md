@@ -11,6 +11,14 @@ See [hardware-video-streaming](https://github.com/bmegli/hardware-video-streamin
 
 See [benchmarks](https://github.com/bmegli/realsense-depth-to-vaapi-hevc10/wiki/Benchmarks) on wiki for CPU/GPU usage.
 
+See [how it works](https://github.com/bmegli/realsense-depth-to-vaapi-hevc10/wiki/How-it-works) on wiki to understand the code
+
+## Warning
+
+This program uses video codec for depth map encoding. It will not work perfectly.
+
+If you are not concerned with CPU usage and realtime requirements consider using [HEVC 3D extension](https://hevc.hhi.fraunhofer.de/3dhevc) reference software encoder instead.
+
 ## Platforms 
 
 Unix-like operating systems (e.g. Linux).
@@ -22,34 +30,6 @@ Tested on Ubuntu 18.04.
 - Intel VAAPI compatible hardware encoder ([Quick Sync Video](https://ark.intel.com/Search/FeatureFilter?productType=processors&QuickSyncVideo=true)), at least Kaby Lake
 
 Tested with D435 camera.
-
-## What it does
-
-- process user input (width, height, framerate, depth units, time to capture)
-- init file for raw HEVC output
-- init Realsense D400 device
-- init VAAPI encoder with HVE
-- read depth data from the camera
-- encode to HEVC Main10 profile
-- write to raw HEVC file
-- cleanup
-
-Realsense and VAAPI devices are configured to work together (no software depth processing on the host)
-- VAAPI is configured for HEVC 10 bit per channel [P010LE](https://github.com/bmegli/hardware-video-encoder/issues/18#issuecomment-569501602) pixel format
-- Realsense is configured to ouput P016LE (Y plane) compatible depth data
-- P016LE data is binary compatible with P010LE data
-- the data output by Realsense is directly fed to VAAPI hardware encoder
-- the P010LE color data is filled with constant value
-
-We have 10 bits to encode 16 bit Realsense depth data which means range/precission trade-off:
-- the trade-off is controlled with depth units (0.0001 - 0.01)
-- the best precision/worst range is 6.4 mm/6.5472 m (for depth units 0.0001)
-- the worst precission/best range is 64 cm/654.72 m (for depth units 0.01)
-- all trade-offs in between are possible
-
-Note that this program uses video codec for depth map encoding. It will not work perfectly.
-
-If you are not concerned with CPU usage and realtime requirements consider using [HEVC 3D extension](https://hevc.hhi.fraunhofer.de/3dhevc) reference software encoder instead. As far as I know those extensions are currently not supported by hardware encoders.
 
 ## Dependencies
 
