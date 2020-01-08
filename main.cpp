@@ -127,6 +127,7 @@ bool main_loop(const input_args& input, rs2::pipeline& realsense, hve *he, ofstr
 
 		dump_frame_info(depth);
 
+		/* Disable hardware encoding for benchmark
 		if(hve_send_frame(he, &frame) != HVE_OK)
 		{
 			cerr << "failed to send frame to hardware" << endl;
@@ -144,8 +145,10 @@ bool main_loop(const input_args& input, rs2::pipeline& realsense, hve *he, ofstr
 			cerr << "failed to encode frame" << endl;
 			break;
 		}
+		*/
 	}
 
+	/*
 	//flush the encoder by sending NULL frame
 	hve_send_frame(he, NULL);
 	//drain the encoder from buffered frames
@@ -154,6 +157,7 @@ bool main_loop(const input_args& input, rs2::pipeline& realsense, hve *he, ofstr
 		cout << endl << "encoded in: " << packet->size;
 		out_file.write((const char*)packet->data, packet->size);
 	}
+	*/
 	cout << endl;
 
 	delete [] color_data;
