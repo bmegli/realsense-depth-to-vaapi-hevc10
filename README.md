@@ -9,25 +9,7 @@ This program is example how to use:
  
 See [hardware-video-streaming](https://github.com/bmegli/hardware-video-streaming) for other related projects.
 
-## CPU/GPU usage
-
-Tested with 848x480, 30 fps.
-
-- CPU usage reported by `htop` (core %)
-- GPU usage reported by `intel_gpu_top`(render busy %)
-
-The usage values [without](https://github.com/bmegli/realsense-depth-to-vaapi-hevc10/tree/benchmark-no-encoding)/[with](https://github.com/bmegli/realsense-depth-to-vaapi-hevc10/commit/c665d2d855211a8c28692c98e11fb6c413b7d898) encoding enabled.
-
-| Platform               | CPU       | GPU          |  CPU usage    | GPU usage  |
-|------------------------|-----------|--------------|---------------|------------|
-| Latte Panda Alpha      | M3-7Y30   |Intel HD 615  |   to be done  | to be done |
-| High end laptop (2017) | i7-7820HK |Intel HD 630  |    3%/10%     |   0%/14%   |
-
-Here (Kaby Lake) we see that:
-- GPU took part in encoding (14%)
-- CPU was lightly used (7% of 800%, 4 cores with HT)
-
-On some architectures it is possible to use hardware/low power HEVC encoding (no GPU usage).
+See [benchmarks](https://github.com/bmegli/realsense-depth-to-vaapi-hevc10/wiki/Benchmarks) on wiki for CPU/GPU usage.
 
 ## Platforms 
 
