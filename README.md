@@ -28,7 +28,7 @@ Tested on Ubuntu 18.04.
 - D400 series camera
 - Intel VAAPI compatible hardware encoder ([Quick Sync Video](https://ark.intel.com/Search/FeatureFilter?productType=processors&QuickSyncVideo=true)), at least Kaby Lake
 
-Tested with D435 camera. There is possibility that it will also work with AMD hardware.
+Tested with D435 camera.
 
 ## What it does
 
@@ -50,8 +50,8 @@ Realsense and VAAPI devices are configured to work together (no software depth p
 
 We have 10 bits to encode 16 bit Realsense depth data which means range/precission trade-off:
 - the trade-off is controlled with depth units (0.0001 - 0.01)
-- the best precision/worst range is 6.4 mm/6.5535 m (for depth units 0.0001)
-- the worst precission/best range is 64 cm/655.35 m (for depth units 0.01)
+- the best precision/worst range is 6.4 mm/6.5472 m (for depth units 0.0001)
+- the worst precission/best range is 64 cm/654.72 m (for depth units 0.01)
 - all trade-offs in between are possible
 
 Note that this program uses video codec for depth map encoding. It will not work perfectly.
