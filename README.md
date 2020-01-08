@@ -132,13 +132,13 @@ Once you identify your Intel device run the program, e.g.
 Play result raw HEVC file with FFmpeg:
 
 ``` bash
-# output goes to output.h264 file 
+# output goes to output.hevc file
 ffplay output.hevc
 ```
 
 You will see:
 - dark colors for near depth (near 0 value)
-- light colors for far depth (near 65536 value)
+- light colors for far depth (near 65472 value)
 - black where there is no data (0 value)
 - all above is somewhat counterintuitive
 
