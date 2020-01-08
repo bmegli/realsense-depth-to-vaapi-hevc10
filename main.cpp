@@ -55,6 +55,8 @@ void dump_frame_info(const rs2::depth_frame &frame);
 void init_realsense(rs2::pipeline& pipe, const input_args& input);
 int process_user_input(int argc, char* argv[], input_args* input, hve_config *config);
 
+const uint16_t P010LE_MAX = 0xFFC0; //in binary 10 ones followed by 6 zeroes
+
 int main(int argc, char* argv[])
 {
 	struct hve *hardware_encoder;
@@ -188,7 +190,7 @@ void init_realsense(rs2::pipeline& pipe, const input_args& input)
 
 	cout << "Setting realsense depth units to " << input.depth_units << endl;
 	cout << "This will result in:" << endl;
-	cout << "-range " << input.depth_units * UINT16_MAX << " m" << endl;
+	cout << "-range " << input.depth_units * P010LE_MAX << " m" << endl;
 	cout << "-precision " << input.depth_units*64.0f << " m (" << input.depth_units*64.0f*1000 << " mm)" << endl;
 }
 
