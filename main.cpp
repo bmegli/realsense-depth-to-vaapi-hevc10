@@ -25,6 +25,7 @@
 
 // Realsense API
 #include <librealsense2/rs.hpp>
+#include <librealsense2/rs_advanced_mode.hpp>
 
 #include <fstream>
 #include <iostream>
@@ -192,6 +193,23 @@ void init_realsense(rs2::pipeline& pipe, const input_args& input)
 	cout << "This will result in:" << endl;
 	cout << "-range " << input.depth_units * P010LE_MAX << " m" << endl;
 	cout << "-precision " << input.depth_units*64.0f << " m (" << input.depth_units*64.0f*1000 << " mm)" << endl;
+
+	try
+	{
+		 rs400::advanced_mode advanced = profile.get_device();
+		 pipe.stop(); //workaround the problem with setting advanced_mode on running stream
+		 STDepthTableControl depth_table = advanced.get_depth_table();
+		 depth_table.depthClampMax = P010LE_MAX;
+		 advanced.set_depth_table(depth_table);
+		 pipe.start(cfg);
+	}
+	catch(const exception &)
+	{
+		cerr << "failed to set depth clamp max (rs400:advanced_mode)";
+		throw;
+	}
+
+	cout << "Clamping range at " << input.depth_units * P010LE_MAX << " m" << endl;
 }
 
 int process_user_input(int argc, char* argv[], input_args* input, hve_config *config)
