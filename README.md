@@ -13,6 +13,8 @@ See [how it works](https://github.com/bmegli/realsense-depth-to-vaapi-hevc10/wik
 
 See [hardware-video-streaming](https://github.com/bmegli/hardware-video-streaming) for other related projects.
 
+See [video](http://www.youtube.com/watch?v=qnTxhfNW-_4) to see wireless point cloud streaming using this encoding.
+
 ## Warning
 
 This program uses video codec for depth map encoding. It will not work perfectly.
