@@ -132,3 +132,11 @@ Like in LGPL, if you modify the code, you have to make your changes available.
 Making a github fork with your changes satisfies those requirements perfectly.
 
 Since you are linking to FFmpeg libraries. Consider also avcodec and avutil licensing.
+
+## Beyond Depth Encoding
+
+The next logical step is to add texture to the depth map.
+
+[RNHVE](https://github.com/bmegli/realsense-network-hardware-video-encoder) already does that. If you are interested see:
+- its pipelines [documentation](https://github.com/bmegli/realsense-network-hardware-video-encoder/wiki/How-it-works#encoding-pipelines)
+- specifically the [texture encoding](https://github.com/bmegli/realsense-network-hardware-video-encoder/wiki/Infrared-encoding-in-P010LE-UV-plane)
