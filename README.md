@@ -140,3 +140,4 @@ The next logical step is to add texture to the depth map.
 [RNHVE](https://github.com/bmegli/realsense-network-hardware-video-encoder) already does that. If you are interested see:
 - its pipelines [documentation](https://github.com/bmegli/realsense-network-hardware-video-encoder/wiki/How-it-works#encoding-pipelines)
 - specifically the [texture encoding](https://github.com/bmegli/realsense-network-hardware-video-encoder/wiki/Infrared-encoding-in-P010LE-UV-plane)
+- the [video](https://www.youtube.com/watch?v=zVIuvWMz5mU)
