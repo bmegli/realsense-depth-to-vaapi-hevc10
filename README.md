@@ -31,7 +31,7 @@ Tested on Ubuntu 18.04.
 ## Hardware
 
 - D400 series camera
-- Intel VAAPI compatible hardware encoder ([Quick Sync Video](https://ark.intel.com/Search/FeatureFilter?productType=processors&QuickSyncVideo=true)), at least Kaby Lake
+- Intel VAAPI compatible hardware encoder (Quick Sync Video), at least Kaby Lake (see also [HVE issue](https://github.com/bmegli/hardware-video-encoder/issues/21))
 
 Tested with D435 camera.
 
